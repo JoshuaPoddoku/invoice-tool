@@ -1,0 +1,54 @@
+@import "variables.scss";
+
+.ItemContainer{
+    border-bottom: 1px solid $light-blue-text;
+    cursor: pointer;
+
+    :hover > &{
+        background-color: $blue-active;
+    }
+    
+    :hover > &__Left {
+        &__Heading{
+            color: #ffffff;
+        }
+    }
+
+    &__Inner{
+        margin: 0 1.7rem;
+        display: flex;
+        flex-direction: row;
+        font-size: 12px;
+        justify-content: space-between;
+    }
+
+    
+    &__Left{
+        
+        &__Heading{
+            color: #9ca7ba;
+        }
+
+
+        &__Name{
+            color: $light-blue-text;
+        }
+
+    }
+
+    &__Right{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        p {
+            font-size: 8px;
+        }
+
+        h1{
+            font-size: 20px;  
+        }
+    }
+
+    
+}

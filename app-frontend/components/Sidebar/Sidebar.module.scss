@@ -1,0 +1,75 @@
+@import "variables.scss";
+
+.Sidebar{
+    flex: 0.25;
+    background-color: $dark-blue-bg;
+    height: 100vh;
+    overflow-y: scroll;
+
+
+    &__Heading{
+        color: $inactive-text;
+        margin-left: 0.6rem;
+        font-size: 12px;
+    }
+}
+
+.ItemContainer{
+    border-bottom: 1px solid $light-blue-text;
+    cursor: pointer;
+
+
+    
+    :hover > &__Left {
+        &__Heading{
+            color: #ffffff;
+        }
+    }
+
+    &__Inner{
+        display: flex;
+        flex-direction: row;
+        font-size: 12px;
+        justify-content: space-between;
+
+        :hover > &{
+            background-color: $blue-active;
+        }
+    }
+
+    
+    &__Left{
+
+        margin-left: 0.6rem;
+        
+        &__Heading{
+            color: #9ca7ba;
+        }
+
+
+        &__Name{
+            color: $light-blue-text;
+        }
+
+    }
+
+    &__Right{
+        margin-right: 0.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        color: #9ca7ba;
+        p {
+            font-size: 8px;
+        }
+
+        h1{
+            font-size: 20px;  
+        }
+    }
+
+    
+}
+
+

@@ -1,0 +1,132 @@
+@import "variables.scss";
+
+.InvoiceContainer{
+    margin: 3rem;
+    width: 695px;
+    height: 842px;
+    box-shadow:  20px 20px 60px #d9d9d9,
+             -20px -20px 60px #ffffff;
+    z-index: -100;
+
+    &__header{
+       display: flex;
+       margin: 0 2rem;
+       justify-content: space-between;
+       border-bottom: 1px solid $active-text;
+
+       &__details{
+
+        h4, h5{
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        p{
+            font-size: 10px;
+        }
+       }
+
+       &__right{
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+        font-size: 14px;
+
+        &__details{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        p{
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        span{
+            color: gray;
+        }
+
+        &__button{
+            padding: 1rem;
+            margin: 2rem 0 0 2rem;
+            border-radius: 5px;
+            border: 2px solid $light-blue;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            span{
+                text-transform: uppercase;
+                color: $light-blue;
+                margin-right: 8px;
+            }
+        }
+       }
+    }
+
+    //Table header styles
+
+    &__table{
+        display: flex;
+        text-transform: uppercase;
+        border-bottom: 1px solid $active-text;
+        color: $active-text;
+        margin: 0 2rem;
+        padding: 1rem 0;
+        align-items: center;
+        font-size:14px;
+
+        &__item{
+            flex: 0.5;
+            justify-self: center;
+        }
+
+        &__qty{
+            flex: 0.35;
+            display: flex;
+            justify-content: center;
+        }
+        
+        &__price{
+            flex: 0.15;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    //Table body stylesheet
+
+    &__body{
+        display: flex;
+        text-transform: capitalize;
+        border-bottom: 1px solid $active-text;
+        color: #000000;
+        margin: 0 2rem;
+        padding: 1rem 0;
+        align-items: center;
+        font-size:14px;
+    }
+
+    &__footer{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin: 0 2rem;
+        font-size:14px;
+
+        &__row{
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: flex-start;
+            margin-right:  40px;
+            
+            p{
+                margin-right: 28px;
+                display: flex;
+                text-align: left;
+            }
+        }
+    }
+
+}

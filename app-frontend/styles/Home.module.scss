@@ -1,0 +1,13 @@
+@import "variables.scss";
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.main{
+  flex: 0.65;
+}
+

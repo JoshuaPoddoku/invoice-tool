@@ -1,0 +1,70 @@
+@import "variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+$montserrat: 'Montserrat', sans-serif;
+
+
+$light-blue-text: #629eee;
+$gray-text: #95a0b2;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $montserrat;
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+a {
+  color: $light-blue-text;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $gray-text;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

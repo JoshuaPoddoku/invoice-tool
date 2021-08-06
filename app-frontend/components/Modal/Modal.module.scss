@@ -1,0 +1,335 @@
+@import "variables.scss";
+
+.col{
+    display: flex;
+    flex-direction: column;
+
+    &__address{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 30px;
+    }
+
+    label{
+        font-size: 14px;
+        letter-spacing: 0px;
+        margin-bottom: 5px;
+    }
+
+    textarea{
+        resize: vertical;
+        border-radius: 3px;
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+
+    span{
+        border: 2px solid $button-color;
+        padding:  0.2rem 0.5rem;
+        cursor: pointer;
+    }
+
+    &__phone{
+        background-color: #f2f3f5;
+        color: $border;
+        border-radius: 3px;
+        border: 1px solid $border;
+        span{
+            padding: 3px;
+            margin: 3px;
+            border: 0;
+        }
+    }
+}
+
+.input{
+    padding: 0.5rem;
+    outline: none;
+    flex: 0.5;
+    border-radius: 3px;
+    min-width: 23rem;
+    border: 1px solid $border;
+    :focus > &{
+        outline: none;    
+    }
+}
+
+.input__item{
+
+
+    &__name{
+        flex: 0.7;
+        padding: 0.5rem;
+        outline: none;
+        margin-right:  20px;
+        border-radius: 3px;
+        min-width: 2rem;
+        border: 1px solid $border;
+        :focus > &{
+            outline: none;    
+        }
+    }
+
+    &__qty{
+        flex: 0.15;
+        padding: 0.5rem;
+        outline: none;
+        margin-right:  20px;
+        border-radius: 3px;
+        min-width: 2rem;
+        border: 1px solid $border;
+        :focus > &{
+            outline: none;    
+        }
+    }
+
+    &__price{
+        flex: 0.15;
+        padding: 0.5rem;
+        outline: none;
+        margin-right:  20px;
+        border-radius: 3px;
+        min-width: 2rem;
+        border: 1px solid $border;
+        :focus > &{
+            outline: none;    
+        }
+    }
+}
+
+.Header{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-top: 0;
+    margin-right: 20px;
+
+    p{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 12px;
+        color: $border;
+    }
+    p, h4, h5{
+        line-height: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+
+.phone{
+    padding: 0.5rem;
+    outline: none;
+    flex: 0.9;
+    border: 0;
+    width: 20.5rem;
+    :focus > &{
+        outline: none;    
+    }
+}
+
+.pin{
+    padding: 0.5rem;
+    outline: none;
+    width: 5rem;
+    flex: 1;
+    border-radius: 3px;
+    border: 1px solid $border;
+    letter-spacing: 3px;
+    font-size: 18px;
+    font-weight: 200;
+    :focus > &{
+        outline: none;    
+    }
+}
+
+.product__details{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.row__border{
+    @extend .row;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $border;
+}
+
+
+.ModalOverlay{
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.ModalContainer{
+    background-color: rgb(255, 255, 255);
+    width: 900px;
+    max-height: 500px;
+    border-radius: 5px;
+    z-index: 9999;
+    top: 5%;
+    left: 15%;
+    position: fixed;
+
+    //Header
+
+    &__header{
+        border-bottom: 1px solid $active-text;
+        margin: 1rem;
+
+        &__top{
+            display: flex;
+            align-items: flex-end;
+
+            h2{
+                line-height: 0;
+                margin-right:  20px;
+                flex:0.4;
+                font-size: 24px;
+            }
+            p{
+                line-height: 0;
+                flex: 0.5;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 14px;
+                color: $border;
+            }
+
+            &__close{
+                flex: 0.1;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                margin-bottom: 1rem;
+                cursor: pointer;
+            }
+        }
+
+        &__bottom{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            h3{
+                line-height: 1.6;
+                margin-right:  20px;
+                text-transform: uppercase;
+                font-size: 14px;
+                align-self: flex-end;
+            }
+
+            span{
+                display: flex;
+                justify-content:space-between;
+                align-items: center;
+                text-transform: uppercase;
+                background-color: $footer-bg;
+                padding: 0.7rem;
+                border-radius: 5px;
+                color: $button-color;
+                margin-bottom: 5px;
+                cursor: pointer;
+                font-size: 14px;
+            }
+
+            &__skip{
+                margin: 0 10px;
+            }
+
+            &__edit{
+                align-self: flex-end;
+            }
+
+        }
+    }
+    //body
+        &__body{
+            padding: 0 1rem;
+                //Table header styles
+
+    &__table{
+        display: flex;
+        text-transform: uppercase;
+        border-bottom: 1px solid $active-text;
+        color: $active-text;
+        padding-bottom: 1rem;
+        align-items: center;
+        font-size: 14px;
+        &__item{
+            flex: 0.6;
+            justify-self: center;
+        }
+
+        &__qty{
+            flex: 0.2;
+            display: flex;
+            justify-content: left;
+        }
+        
+        &__price{
+            flex: 0.2;
+            display: flex;
+            justify-content:left;
+        }
+    }
+
+        }
+
+    //first step footer
+    &__footer{
+        background-color: $footer-bg;
+        padding: 1rem;
+        border-radius: 0 0 3px 3px;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        font-size: 12px;
+
+        button{
+            background-color: $button-color;
+            outline: 0;
+            border: 0;
+            border-radius: 3px;
+            padding: 1rem;
+            text-transform: uppercase;
+        }
+    }
+
+            // final step footer
+            &__footer__save{
+                background-color: $footer-bg;
+                padding: 1rem;
+                border-radius: 0 0 3px 3px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+            
+                button{
+                    background-color: $button-color;
+                    outline: 0;
+                    border: 0;
+                    margin: 1.5rem 0;
+                    border-radius: 3px;
+                    padding: 0.25rem 4rem;
+                    text-transform: uppercase;
+                    color: #ffffff;
+                }
+    
+    
+        }
+}
