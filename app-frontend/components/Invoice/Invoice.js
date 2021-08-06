@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import Image from 'next/Image'
+import Image from 'next/image'
 import Pdf from 'react-to-pdf'
 import styles from './Invoice.module.scss'
 
